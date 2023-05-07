@@ -14,10 +14,10 @@ class Product(models.Model):
     weight = models.IntegerField(verbose_name='weight')
     price = models.IntegerField(verbose_name='price')
 
-    def __str__(self):
-        return f'{self.name} ({self.price})'
 
 #Карточка ТП, Карточка ТП и поставщик
+    def count_product_types(self):
+        return self.category.count()
 
 
 class Card(models.Model):
